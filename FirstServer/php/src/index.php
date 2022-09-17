@@ -4,7 +4,15 @@
     <link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 <body>
-<h1>Таблица пользователей данного продукта</h1>
+<p>
+  <a href="index1.php">первое задание</a>
+</p>
+<p>
+  <a href="index2.php">второе задание</a>
+</p>
+<p>
+  <a href="index3.php">третье задание</a>
+</p>
 <table>
     <tr><th>Id</th><th>Name</th><th>Surname</th></tr>
 <?php
