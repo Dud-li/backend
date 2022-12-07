@@ -1,0 +1,29 @@
+version: '3'
+services:
+  php_5:
+    build:
+      context: ./docker/php
+    volumes:
+      - './src:/var/www/html'
+      - './docker/php/php.ini:/usr/local/etc/php/conf.d/php.ini'
+
+  nginx_5:
+    image: nginx:latest
+    ports:
+      - 80:80
+    volumes:
+      - './src:/var/www/html'
+      - './docker/nginx/conf.d:/etc/nginx/conf.d'
+
+  mysql_5:
+    image: mysql:8
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - './docker/volume/mysql:/var/lib/mysql'
+
+  redis:
+    image: redis:alpine3.16
+    restart: always
+    ports:
+      - "6379:6379"

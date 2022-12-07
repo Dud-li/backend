@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS users(
+    user varchar(50) NOT NULL,
+    password   varchar(20) NOT NULL,
+    primary key (user)
+);
+
+CREATE TABLE IF NOT EXISTS admins(
+    admin varchar(20) NOT NULL,
+    pwd   varchar(20) NOT NULL,
+    primary key (admin)
+);
+
+INSERT INTO admins VALUES ('Teacher','12345');
+INSERT INTO users VALUES ('Dudli','123');
